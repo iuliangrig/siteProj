@@ -1,0 +1,591 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    width: 100dvw;
+    overflow-x: hidden;
+    font-family: 'Hebbo','Arial', sans-serif;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    padding: 1% 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar a {
+    position: relative;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.navBar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .2s;
+}
+
+.navBar a:hover::before {
+    width: 100%;
+}
+
+.developeBuild {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+    color: #fff;
+    background-image: linear-gradient(to left, rgb(156, 12, 161), #39065a);
+    height: 100dvh;
+}
+
+.developeBuild img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.developeBuild button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    --fs-xl: clamp(3.5rem, 12vw + 1rem, 12rem);
+    color: #fff;
+    font-weight:600;
+    border: 1px solid #e858ae;
+    background: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btnMLeft {
+    margin: 30px 20px;
+}
+
+.developeBuild button:hover {
+    background-color: #e858ae;
+}
+
+.studyTracks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.centerStudy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3%;
+
+}
+
+h2 {
+    font-size: 1.6rem;
+    color:#e858ae;
+}
+
+hr {
+    width: 5rem;
+    margin: 1% 25% 1% 25%;
+    border: 1px solid #e858ae;
+}
+
+.studyTracks .icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0% 0% 5% 15%;
+}
+
+.studyTracks .icons h3 {
+    color: #e858ae;
+}
+
+.icons p {
+    max-width: 60%;
+    word-wrap: break-word;
+    font-weight: 600;
+    text-align: center;
+}
+
+.robots {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #39065a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.robots h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.robotsDiv {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 2%;
+}
+
+.robotsDiv .robotImg2 {
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    min-width: 350px;
+    max-height: 500px;
+    min-height: 300px;
+}
+
+.robotsDiv .robotImg1 {
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    min-width: 250px;
+    max-height: 300px;
+    min-height: 200px;
+}
+
+.howItWorks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.iconsWorks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0% 0% 5% 10%;
+    gap: 10%;
+}
+
+.howItWorks hr {
+    width: 70px;
+    margin: 8% 25% 1% 25%;
+    border: 1px solid #e858ae;
+}
+
+.iconsWorks img {
+    background: linear-gradient(to bottom, #9a0f98, #ea0599);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit:scale-down;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.iconsWorks p {
+    border: dotted 2px #e858ae;
+    max-width: 60%;
+}
+
+.howItWorks .btnBadge {
+    position: relative;
+    flex-shrink: 0;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.btnBadge:hover {
+    transition: 0.9s;
+    transform: rotateY(360deg);
+}
+
+.buttonBadge {
+    position: absolute;
+    background-color: #fff;
+    top: -10px;
+    right: 120px;
+    width: 30px;
+    height: 30px;
+    color: #39065a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #e858ae;
+    font-size: 1rem;
+}
+
+.whatLearn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    height: 70dvh;
+    background: linear-gradient(to top, rgb(156, 12, 161), #39065a);
+}
+
+.whatLearn p {
+    color: #fff;
+}
+
+.learnImg img {
+    width: 100%;
+    max-width: 550px;
+    min-width: 300px;
+    height: auto;
+}
+
+.learnRight img, p{
+    margin: 2%;
+}
+
+.firstLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+.secondLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+.firstLine img:hover {
+    transform: scale(1.5);
+}
+
+.secondLine img:hover {
+    transform: scale(1.5);
+}
+
+.recommend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60dvh;
+}
+
+.firstRecom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60dvw;
+}
+
+.recomTitle h2 {
+    margin-bottom: 10%;
+}
+
+.secondRecom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    margin-top: 2%;
+}
+
+.thirdRecom {
+    border: 1px solid rgb(231, 138, 32);
+    width: 30%;
+    height: 10%;
+    border-radius: 20px;
+}
+
+.thirdRecom p {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5%;
+    font-size: 1.2rem;
+}
+
+.fourthRecom img {
+    height: 30px;
+    width: 30px;
+}
+
+.fourthRecom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5%;
+}
+
+.prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3%;
+}
+
+.priceMainTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.priceMainTitle h2 {
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+.priceMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin: 3%;
+    width: 60%;
+}
+
+.priceTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40dvh;
+    width: 30dvw;
+    gap: 5%;
+    padding: 3%;
+    border-radius: 10%;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(to bottom, rgb(156, 12, 161), #39065a);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    transition: .2s;
+}
+
+.priceTable:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+.priceSecond {
+    height: 50dvh;
+    width: 32dvw;
+}
+
+.priceFeatures {
+    list-style: none;
+
+}
+
+.priceButton {
+    width: 6em;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight:600;
+    background: none;
+    border: 1px solid #e858ae;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.priceButton:hover {
+    background-color: #e858ae;
+}
+
+.pRecomCol {
+    font-size: 1.6rem;
+    color:#ee2288;
+}
+
+.pPriceMonth {
+    color: #33dada;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60dvh;
+    margin-top: 5%;
+}
+
+.contactInput {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2%;
+    margin-top: 2%;
+}
+
+.contactMainTitle hr {
+    margin-top: 13%;
+}
+
+.texting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.contactIcon {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+.messageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 12dvh;
+    width: 30dvw;
+    resize: none;
+    border-radius: 5%;
+    padding: 4%;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.message .send {
+    width: 12em;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #121313;
+    font-weight:600;
+    background: none;
+    border: 1px solid #e858ae;
+    margin-top: 3%;
+    border: 2px solid #121313;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: linear-gradient(to right, #ea0599, #9a0f98);
+}
+
+.send:hover {
+    background: #3acfcf;
+}
+
+.contactInput input {
+    font-size: .9dvw;
+    padding: 2%;
+}
+
+.contactInput img {
+    margin-left: 5%;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #39065a;
+    color: #fff;
+    width: 100dvw;
+}
+
+.footerElem {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.footerBar {
+    width: 80%;
+}
+
+.footerNavElem {
+    margin-right: 4%;
+    color: #fff;
+    text-decoration: none;
+    transition: .2s;
+    position: relative;
+}
+
+.footerNavElem::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .2s;
+}
+
+.footerNavElem:hover::before {
+    width: 100%;
+}
+
+.footerBar img {
+    margin-left: 1.5em;
+    transition: .2s;
+    transition: transform .7s ease-in-out;
+}
+
+.footerBar img:hover {
+    transform: scale(1.5) rotate(360deg);
+}
+
+.fixedLogo img{
+    position: fixed;
+    bottom: 8%;
+    left: 2%;
+    width: 100px;
+    transition: .2s;
+}
+
+.fixedLogo img:hover {
+    transform: scale(1.5);
+}
+
+@media (max-width: 960px) {
+    .header, .developeBuild, .studyTracks, .centerStudy, .icons, .robots, .robotsDiv, .howItWorks, .iconsWorks, .buttonBadge, .whatLearn, .firstLine, .secondLine, .recommend, .firstRecom, .secondRecom, .fourthRecom, .prices, .priceMainTitle, .priceMain, .priceTable, .contact, .contactInput, .texting, .messageBox, .message, .footerElem {
+        flex-direction: column;
+        height: 100%;
+        gap: 1em;
+    }
+}
