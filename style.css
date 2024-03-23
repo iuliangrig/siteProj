@@ -28,7 +28,7 @@ body {
     color: #fff;
     text-decoration: none;
     margin-left: 50px;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .navBar a::before {
