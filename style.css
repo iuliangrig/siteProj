@@ -11,13 +11,15 @@ body {
     font-family: 'Hebbo','Arial', sans-serif;
 }
 
-.header{
-    position: absolute;
-    width: 100%;
-    padding: 1% 8%;
+.flexCentered {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+.header{
+    height: 100dvh;
+    background-image: linear-gradient(to left, rgb(156, 12, 161), #39065a);
 }
 
 .navBar a {
@@ -43,13 +45,20 @@ body {
     width: 100%;
 }
 
+.navAndImg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 4rem 0rem 8rem;
+}
+
 .developeBuild {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 5%;
     color: #fff;
-    background-image: linear-gradient(to left, rgb(156, 12, 161), #39065a);
+
     height: 100dvh;
 }
 
@@ -76,11 +85,9 @@ h1 {
     font-weight:600;
     border: 1px solid #e858ae;
     background: none;
+    margin-left: 1rem;
+    margin-top: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.btnMLeft {
-    margin: 30px 20px;
 }
 
 .developeBuild button:hover {
@@ -88,17 +95,11 @@ h1 {
 }
 
 .studyTracks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     background-color: #fff;
 }
 
 .centerStudy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     padding: 3%;
 
@@ -116,14 +117,19 @@ hr {
 }
 
 .studyTracks .icons{
+    padding: 1rem 10rem;
+}
+
+.icons div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0% 0% 5% 15%;
+    flex-direction: column;
 }
 
 .studyTracks .icons h3 {
     color: #e858ae;
+    padding-top: 1rem;
 }
 
 .icons p {
@@ -135,24 +141,11 @@ hr {
 
 .robots {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #39065a);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding: 1%;
-}
-
-.robots h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 5rem;
 }
 
 .robotsDiv {
-    display: flex;
-    justify-content:center;
-    align-items: center;
     gap: 2%;
 }
 
@@ -175,25 +168,22 @@ hr {
 }
 
 .howItWorks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     background-color: #fff;
 }
 
-.iconsWorks {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0% 0% 5% 10%;
-    gap: 10%;
+.centerStudyWorks {
+    flex-direction: column;
+    margin-top: 3rem;
 }
 
 .howItWorks hr {
     width: 70px;
-    margin: 8% 25% 1% 25%;
+    margin: 1%;
     border: 1px solid #e858ae;
+}
+
+.iconsWorks {
+    padding: 1rem 10rem;
 }
 
 .iconsWorks img {
@@ -201,34 +191,39 @@ hr {
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    object-fit:scale-down;
+    object-fit: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
-.iconsWorks p {
-    border: dotted 2px #e858ae;
-    max-width: 60%;
-}
-
-.howItWorks .btnBadge {
-    position: relative;
-    flex-shrink: 0;
+.howItWorks .itemContainer {
+    flex-direction: column;
+    margin: 3rem;
+    width: fit-content;
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
 
-.btnBadge:hover {
+.itemContainer p {
+    border: dotted 2px #e858ae;
+    max-width: 8rem;
+}
+
+.iconBadgeContainer:hover {
     transition: 0.9s;
-    transform: rotateY(360deg);
+    transform: rotateX(360deg);
+}
+
+.imgBadge {
+    position: relative;
 }
 
 .buttonBadge {
     position: absolute;
     background-color: #fff;
-    top: -10px;
-    right: 120px;
-    width: 30px;
-    height: 30px;
+    width: 2rem;
+    top: 0;
+    right: 0;
+    aspect-ratio: 1;
     color: #39065a;
     display: flex;
     justify-content: center;
@@ -239,11 +234,8 @@ hr {
 }
 
 .whatLearn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15%;
-    height: 70dvh;
+    height: 40rem;
     background: linear-gradient(to top, rgb(156, 12, 161), #39065a);
 }
 
@@ -263,16 +255,10 @@ hr {
 }
 
 .firstLine {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: .2s;
 }
 
 .secondLine {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: .2s;
 }
 
@@ -285,16 +271,10 @@ hr {
 }
 
 .recommend {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 60dvh;
 }
 
 .firstRecom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     width: 60dvw;
 }
@@ -304,27 +284,22 @@ hr {
 }
 
 .secondRecom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 1%;
     margin-top: 2%;
 }
 
 .thirdRecom {
     border: 1px solid rgb(231, 138, 32);
-    width: 30%;
+    width: 100%;
     height: 10%;
     border-radius: 20px;
-    word-wrap: break-word;
 }
 
 .thirdRecom p {
     display: flex;
     justify-content: flex-end;
     margin: 5%;
-    font-size: 1.2rem;
-    word-wrap: break-word;
+    font-size: 1.2em;
 }
 
 .fourthRecom img {
@@ -337,49 +312,37 @@ hr {
     justify-content: flex-start;
     align-items: center;
     margin: 5%;
-    word-wrap: break-word;
 }
 
 .prices {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     margin: 3%;
 }
 
 .priceMainTitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
 .priceMainTitle h2 {
     font-size: 2rem;
     margin-bottom: 2%;
+    font-size: 3dvw;
 }
 
 .priceMain {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 5%;
     margin: 3%;
     width: 60%;
 }
 
 .priceTable {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     height: 40dvh;
     width: 30dvw;
     gap: 5%;
-    padding: 3%;
+    padding: 7%;
     border-radius: 10%;
-    font-size: 1.2rem;
+    font-size: 1dvw;
     color: #fff;
     background: linear-gradient(to bottom, rgb(156, 12, 161), #39065a);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
@@ -398,7 +361,6 @@ hr {
 
 .priceFeatures {
     list-style: none;
-
 }
 
 .priceButton {
@@ -408,7 +370,7 @@ hr {
     outline: none;
     cursor: pointer;
     border-radius: 50px;
-    font-size: 1.2rem;
+    font-size: 1dvw;
     color: #fff;
     font-weight:600;
     background: none;
@@ -421,7 +383,7 @@ hr {
 }
 
 .pRecomCol {
-    font-size: 1.6rem;
+    font-size: 2dvw;
     color:#ee2288;
 }
 
@@ -430,9 +392,6 @@ hr {
 }
 
 .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     height: 60dvh;
     margin-top: 5%;
@@ -451,9 +410,6 @@ hr {
 }
 
 .texting {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     gap: .5em;
 }
@@ -465,9 +421,6 @@ hr {
 }
 
 .messageBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     height: 12dvh;
     width: 30dvw;
@@ -477,9 +430,6 @@ hr {
 }
 
 .message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
@@ -586,9 +536,13 @@ hr {
 }
 
 @media (max-width: 960px) {
-    .header, .developeBuild, .studyTracks, .centerStudy, .icons, .robots, .robotsDiv, .howItWorks, .iconsWorks, .buttonBadge, .whatLearn, .firstLine, .secondLine, .recommend, .firstRecom, .secondRecom, .fourthRecom, .prices, .priceMainTitle, .priceMain, .priceTable, .contact, .contactInput, .texting, .messageBox, .message, .footerElem {
+    .header, .developeBuild, .studyTracks, .centerStudy, .icons, .robots, .robotsDiv, .howItWorks, .iconsWorks, .whatLearn, .firstLine, .secondLine, .recommend, .firstRecom, .secondRecom, .fourthRecom, .prices, .priceMainTitle, .priceMain, .priceTable, .contact, .contactInput, .texting, .messageBox, .message, .footerElem {
         flex-direction: column;
         height: 100%;
         gap: 1em;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
